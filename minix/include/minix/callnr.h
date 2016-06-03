@@ -121,4 +121,16 @@
 
 #define NR_VFS_CALLS		49	/* highest number from base plus one */
 
+ /*===========================================================================*
+ *				Calls to ADMIN				   *
+ *===========================================================================*/
+
+
+#define ADMIN_BASE		0x1800
+
+#define IS_ADMIN_BASE(type) (((type) & ~0xff) == ADMIN_BASE)
+
+#define NR_ADMIN_CALLS 1
+
+
 #endif /* !_MINIX_CALLNR_H */

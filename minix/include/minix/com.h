@@ -29,6 +29,7 @@
  *   0x1500 - 0x15FF	Input server messages
  *   0x1600 - 0x16FF	VirtualBox (VBOX) requests (see vboxif.h)
  *   0x1700 - 0x17FF	PTYFS requests
+ *   0x1800 - 0x18FF	ADMIN 
  *
  * Zero and negative values are widely used for OK and error responses.
  */
@@ -63,7 +64,8 @@
 #define MFS_PROC_NR  ((endpoint_t) 7)   /* minix root filesystem */
 #define VM_PROC_NR   ((endpoint_t) 8)   /* memory server */
 #define PFS_PROC_NR  ((endpoint_t) 9)  /* pipe filesystem */
-#define LAST_SPECIAL_PROC_NR	10	/* An untyped version for
+#define ADMIN_PROC_NR	((endpoint_t) 10) /* ADMIN */
+#define LAST_SPECIAL_PROC_NR	11	/* An untyped version for
                                            computation in macros.*/
 #define INIT_PROC_NR ((endpoint_t) LAST_SPECIAL_PROC_NR)  /* init
                                                         -- goes multiuser */
